@@ -1,5 +1,5 @@
-const Path = require('path')
-const fs = require('fs')
+import * as fs from 'fs'
+import * as Path from 'path'
 
 // useful for de-indenting multiline template strings
 const noIndent = (s) => s.replace(/^[^\S\r\n]+/gm, '')
@@ -20,4 +20,4 @@ const getPageByName = (app, dv, name) => {
   return readFile(pagePath)
 }
 
-module.exports = { readFile, noIndent, throwError, globalHas, getPageByName }
+export { readFile, noIndent, throwError, globalHas, getPageByName }

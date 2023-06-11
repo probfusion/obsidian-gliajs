@@ -1,4 +1,4 @@
-const { throwError } = require('./utils.cjs')
+import { throwError } from './utils.js'
 
 /**
  * Moves all child nodes of a parent to a grandparent node and removes the parent node.
@@ -117,4 +117,4 @@ const renderMd = (rawMd, dv, tag = 'section', extraClass = 'glia-rendered') => {
   readViewLineRemover()
 }
 
-module.exports = { addLineEls, renderMd, readViewLineRemover, grandpaKidnaps }
+export { addLineEls, renderMd, readViewLineRemover, grandpaKidnaps }
